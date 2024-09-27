@@ -108,11 +108,69 @@ button {
 .up-button:hover {
   background-color: #f0f0f0;
 }
-.down-button,.map {
+.down-button,
+.map {
   display: none;
 }
 
 .up-button1 {
-  position: absolute;
-  right: 5px;
+  /* position: absolute;
+  right: 5px; */
+  border: none;
+  background-color: #fff;
+  color: rgba(0, 0, 0, 0.712);
+  cursor: pointer;
+  font-size: 16px;
+  max-width: 600px !important;
+  height: 40px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  border-radius: 5px;
+  padding-right: 5px;
+  padding-left: 5px;
+  font-weight: bold;
+  text-decoration: none;
+}
+.impact {
+  display: flex;
+  align-content: space-between;
+  justify-content: space-between;
+}
+
+.title-impact {
+  align-self: center;
+}
+.my-list {
+  padding-left: 30px;
+}
+.tour-button {
+  border: none;
+  background-color: #fff;
+  color: rgba(0, 0, 0, 0.712);
+  cursor: pointer;
+  font-size: 16px;
+  max-width: 600px !important;
+  height: 40px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  border-radius: 5px;
+  padding-right: 5px;
+  padding-left: 5px;
+  font-weight: bold;
+  text-decoration: none;
+
+  z-index: 1000000000;
+}
+
+a {
+  text-decoration: none;
+}
+
+.tour-button:hover {
+  background-color: #a3a0a0;
+  color: black;
 }
