@@ -4,7 +4,8 @@ const slidesLeft = document.querySelector(".left-slide");
 const slidesRight = document.querySelector(".right-slide");
 const upButton = document.querySelector(".up-button1");
 const downButton = document.querySelector(".down-button");
-// const mapOfNiger = document.querySelector(".map");
+const mapOfNiger = document.querySelector(".tour-button");
+mapOfNiger.onclick = () => (window.location.href = "map.html");
 
 // Calculate the total number of slides
 const slidesLength = slidesRight.querySelectorAll("div").length;
@@ -18,6 +19,7 @@ slidesLeft.style.top = `-${(slidesLength - 1) * 100}vh`;
 // Add click event listeners to up and down buttons
 upButton.addEventListener("click", () => changeSlide("up"));
 downButton.addEventListener("click", () => changeSlide("down"));
+// console.log(mapOfNiger);
 
 // Function to change the active slide
 const changeSlide = (direction) => {
@@ -28,6 +30,10 @@ const changeSlide = (direction) => {
       activeSlidesIndex = 0;
       console.log("yes boss");
       showMap();
+    }
+    if (activeSlidesIndex > slidesLength - 2) {
+      upButton.style.display = "none";
+      slidesRight.style.zIndex = -1;
     }
   } else if (direction === "down") {
     activeSlidesIndex--;
@@ -48,6 +54,6 @@ const changeSlide = (direction) => {
 function showMap() {
   sliderContainer.style.display = "none";
   upButton.style.display = "none";
-  window.location.href = "map.html";
+  // window.location.href = "map.html";
   // mapOfNiger.style.display = "block";
 }
